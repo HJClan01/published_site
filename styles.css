@@ -1,0 +1,106 @@
+.head {
+    margin-top: 0px;
+    display: flexbox;
+    padding: 0;
+    text-align: center;
+    color: white;
+    height: 180px;
+    
+}
+
+.head h1{ 
+    font-size: 40px;
+ }
+
+.para p { 
+    margin: 0px;
+    padding: 30px;
+}
+
+.container {
+margin-top: 0;
+
+}
+.navbar {
+  margin-top: 0;
+  border-radius: 0px;
+  overflow:hidden; 
+  background-color: rgb(255, 255, 255);
+
+
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+  color: rgb(24, 17, 17); /* Black text color */
+}
+
+img {
+
+  max-width: 100%;
+
+}
+
+
+/* Ensure proper sizing */
+* {
+  box-sizing: border-box;
+}
+
+  /* Column container */
+  .row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    padding-left: 35px;
+  }
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+    overflow: hidden;
+    align-self: auto;
+    text-align: center;
+    flex: 25%; /* Set the width of the sidebar */
+    background-color: white; /* white background color */
+    
+  }
+  
+  /* Main column */
+  .main {
+    height: 700px;
+    flex: 75%; /* Set the width of the main content */
+    background-color: rgb(255, 255, 255); /* White background color */
+    /*padding: 20px;  */
+  }
+
+
+
+
+/* adding responsivness */ 
+@media screen and (max-width: 700px) {
+    .row {
+      flex-direction: column;
+    }
+  }
+  
+
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+.box{
+    flex-shrink:inherit;
+}
